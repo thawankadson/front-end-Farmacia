@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiais - Gerenciamento de Estoque</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- CSS Geral -->
+    <link rel="stylesheet" href="css/materiais.css"> <!-- CSS Específico para Materiais -->
+    <link rel="icon" href="img/farmacia.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <span class="openbtn" onclick="openNav()">&#9776;</span>
+    
+    <nav id="sidebar">
+        <button class="closebtn" onclick="closeNav()">×</button>
+        <a href="index.html">Início</a>
+        <a href="medicamentos.html">Medicamentos</a>
+        <a href="materiais.html">Materiais</a>
+        <a href="sobre.html">Sobre o Sistema</a>
+        <a href="logout.html">Logout</a>
+    </nav>
+    
+    <header>
+        <div class="header-title">
+            <h1>Materiais</h1>
+        </div>
+        <i class="fas fa-sign-out-alt logout-icon" onclick="logout()"></i> <!-- Ícone de sair -->
+    </header>
+    <main>
+        <h2>Gerenciamento de Materiais</h2>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Pesquisar materiais...">
+            <button type="button">
+                <i class="fas fa-search"></i> Buscar
+            </button>
+        </div>
+        <div class="action-buttons">
+            <button onclick="openModal('cadastrar-modal')">Cadastrar Novo</button>
+        </div>
+
+        <div class="materiais-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Lote</th>
+                        <th>Nome</th>
+                        <th>Validade</th>
+                        <th>Quantidade Total</th>
+                        <th>Saida do Estoque</th>
+                        <th>Ações</th> <!-- Coluna para ações -->
+                    </tr>
+                </thead>
+                <tbody id="materiais-tbody">
+                    <!-- As linhas da tabela serão inseridas aqui via JavaScript ou backend -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <div class="social-media">
+            <a href="https://github.com/thawankadson" target="_blank" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/thawan-kadson-6357aa245/" target="_blank" title="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+        <p>&copy; 2024 Gerenciamento de Estoque. Todos os direitos reservados.</p>
+    </footer>
+
+     <!-- Modais -->
+     <div id="cadastrar-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cadastrar-modal')">&times;</span>
+            <h2>Cadastrar Material</h2>
+            <form id="cadastrar-form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+                <label for="categoria">Categoria:</label>
+                <input type="text" id="categoria" name="categoria">
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade">
+                <label for="validade">Validade:</label>
+                <input type="date" id="validade" name="validade">
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="editar-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('editar-modal')">&times;</span>
+            <h2>Editar Material</h2>
+            <form id="editar-form">
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="id" readonly>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+                <label for="categoria">Categoria:</label>
+                <input type="text" id="categoria" name="categoria">
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade">
+                <label for="validade">Validade:</label>
+                <input type="date" id="validade" name="validade">
+                <button type="submit">Salvar Alterações</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="deletar-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('deletar-modal')">&times;</span>
+            <h2>Deletar Material</h2>
+            <form id="deletar-form">
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="id" readonly>
+                <p>Tem certeza que deseja deletar este material?</p>
+                <button type="submit">Deletar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/sidebar.js"></script>
+    <script src="js/medicamentos.js"></script> <!-- Incluindo o script JS -->
+    <script src="js/modals.js"></script> <!-- Incluindo o script para os modais -->
+</body>
+</html>
+    <script src="js/sidebar.js"></script>
+</body>
+</html>

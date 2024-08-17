@@ -1,0 +1,271 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+}
+
+header .header-title{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+header h1 {
+    margin: 0;
+}
+
+.logout-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Ícone de Logout */
+.logout-icon {
+    margin-left: auto;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.2s;
+    
+}
+
+.logout-icon:hover {
+    color: #c82333; /* Cor ao passar o mouse sobre o ícone */
+}
+
+.logout-icon:active {
+    transform: scale(0.95); /* Efeito de clique com redução */
+}
+
+/* Container de Pesquisa */
+.search-container {
+    margin-bottom: 20px;
+}
+
+#search {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
+}
+
+/* Estilos para a div que contém os botões de ação */
+.action-buttons {
+    display: flex;
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-bottom: 20px;
+}
+
+.action-buttons button {
+    background-color: #007bff; /* Azul */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold; /* Texto em negrito */
+    transition: background-color 0.3s, transform 0.2s;
+    /* Adiciona uma leve animação ao botão ao ser clicado */
+}
+
+/* Botões específicos */
+.action-buttons button:nth-of-type(1) {
+    background-color: #28a745; /* Verde para "Cadastrar Novo" */
+}
+
+.action-buttons button:nth-of-type(1):hover {
+    background-color: #218838; /* Verde mais escuro */
+}
+
+.action-buttons button:nth-of-type(2) {
+    background-color: #ffc107; /* Amarelo para "Editar Medicamento" */
+}
+
+.action-buttons button:nth-of-type(2):hover {
+    background-color: #e0a800; /* Amarelo mais escuro */
+}
+
+.action-buttons button:nth-of-type(3) {
+    background-color: #dc3545; /* Vermelho para "Deletar Medicamento" */
+}
+
+.action-buttons button:nth-of-type(3):hover {
+    background-color: #c82333; /* Vermelho mais escuro */
+}
+
+#search {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.search-container button{
+    background-color: #007bff;
+    color: #ddd;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Estilo para os modais */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px; 
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal h2 {
+    margin-top: 0;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal form label,
+.modal form input,
+.modal form button {
+    margin-bottom: 10px;
+}
+
+/* Container de Pesquisa */
+.search-container {
+    display:flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    margin-bottom: 20px;
+    gap: 10px; /* Espaçamento entre o input e o botão */
+}
+
+/* Campo de busca */
+#search {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Botão de Busca */
+.search-container button {
+    background-color: #007bff; /* Azul */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.search-container button:hover {
+    background-color: #0056b3; /* Azul mais escuro */
+}
+
+.search-container button:active {
+    transform: scale(0.98); /* Efeito de clique */
+}
+
+
+/* Tabela de Materiais */
+.materiais-list {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #e9ecef; /* Cor de fundo diferente para o cabeçalho */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Cor de fundo alternada para linhas pares */
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .action-buttons button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .action-buttons button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
